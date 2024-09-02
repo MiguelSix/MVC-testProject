@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Create / Edit";
+}
+
+@model testProject.Models.Contact
+
+<div class="text-center">
+    <h1 class="display-4">Create or Edit a Contact</h1>
+</div>
+
+<form asp-action="CreateEditContactForm" asp-controller="Home" method="post">
+    <label>Name</label>
+    <input asp-for="Name" class="form-control" type="text" placeholder="Add a Name"/>
+    <label class="mt-4">Email</label>
+    <input asp-for="Email" class="form-control" type="text" placeholder="Add an email"/>
+    <label class="mt-4">Phone Number</label>
+    <input asp-for="PhoneNumber" class="form-control" type="text" placeholder="Add a Phone Number"/>
+
+    <button class="btn btn-primary mt-4" type="submit">Submit</button>
+
+</form>
